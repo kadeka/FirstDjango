@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+<p>Welcome to item detail page with id {{item.id}}<p>
+{% block content %}
+	<a href="{% url 'index' %}">Back to item listing</a>
+	<h3>{{ item.title|capfirst }}</h3>
+	<p>{{ item.amount }} currently in stock</p>
+	<h4>Description:</h4>
+	<p>{{ item.description }}</p>
+{% endblock content %}
